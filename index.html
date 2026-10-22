@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geron Accounting Bot</title>
+<style>
+  :root { --bg: #fafaf9; --fg: #1c1917; --muted: #57534e; --link: #1d4ed8; --rule: #e7e5e4; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1c1917; --fg: #f5f5f4; --muted: #a8a29e; --link: #93c5fd; --rule: #44403c; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem; }
+  h1 { font-size: 1.8rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2rem 0 .5rem; }
+  .lede { color: var(--muted); margin-top: 0; }
+  a { color: var(--link); }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Geron Accounting Bot</h1>
+  <p class="lede">A private Telegram bot that keeps a shared ledger for each of its owner's chats in Google Sheets.</p>
+
+  <h2>What it does</h2>
+  <p>In a Telegram chat, people send short commands to record money in and money out, in Ukrainian hryvnia, US dollars or euros. The bot writes each entry to that chat's Google Sheets ledger and reports the balance in US dollars at the current rates. Entries can be corrected or voided, and every change is logged in the sheet.</p>
+
+  <h2>Who can use it</h2>
+  <p>It isn't a public service. Only its owner and the managers the owner appoints can record or change entries.</p>
+
+  <h2>How it uses Google</h2>
+  <p>When an admin sets up a new chat, the bot creates a spreadsheet named after the chat in the owner's Google Drive and formats it as a ledger. To do that, the owner signs in once with Google's narrowest Drive permission, which covers only the files the bot itself creates. The bot can't see or open anything else in the owner's Drive. Details are in the <a href="privacy.html">privacy policy</a>.</p>
+
+  <footer><a href="privacy.html">Privacy policy</a></footer>
+</main>
+</body>
+</html>
